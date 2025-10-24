@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti, mi amor 💖</title>
+  <style>
+    /* Fondo romántico */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffe5f0, #fff0f6);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 182, 193, 0.9);
+      padding: 25px 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #b30059;
+      text-shadow: 2px 2px #ffe6f2;
+    }
+
+    /* Contenedor principal */
+    .carta {
+      background: rgba(255, 240, 246, 0.9);
+      border-radius: 20px;
+      width: 85%;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+      text-align: left;
+      position: relative;
+      display: none; /* Se oculta hasta que el botón la muestre */
+      animation: aparecer 2s ease forwards;
+    }
+
+    /* Animación de aparición */
+    @keyframes aparecer {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Decoración de corazones */
+    .corazon {
+      position: fixed;
+      font-size: 2em;
+      color: #ff4d94;
+      animation: flotar 6s ease-in-out infinite;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0); opacity: 0.8; }
+      50% { transform: translateY(-20px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.8; }
+    }
+
+    /* Imagen */
+    .foto {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .foto img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      border: 3px solid #ffb6c1;
+    }
+
+    /* Texto de la carta */
+    .texto-carta {
+      font-size: 1.15em;
+      line-height: 1.8;
+      color: #5c0033;
+      white-space: pre-line;
+    }
+
+    /* Botón */
+    button {
+      background-color: #ff4da6;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+      margin-top: 40px;
+    }
+
+    button:hover {
+      background-color: #ff1a75;
+    }
+
+    footer {
+      margin: 40px 0;
+      font-style: italic;
+      color: #800040;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Para mi niño bonito 💕</h1>
+  </header>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5b5ad0c8b2.mp3?filename=soft-romantic-piano-14012.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Corazones flotantes -->
+  <div class="corazon" style="top: 10%; left: 15%;">💗</div>
+  <div class="corazon" style="top: 20%; right: 20%;">💖</div>
+  <div class="corazon" style="bottom: 15%; left: 10%;">💘</div>
+  <div class="corazon" style="bottom: 25%; right: 25%;">💝</div>
+  <div class="corazon" style="top: 50%; left: 50%;">💞</div>
+
+  <!-- Botón para mostrar la carta -->
+  <button id="mostrarCarta">Haz clic para ver mi carta 💌</button>
+
+  <!-- Carta -->
+  <div class="carta" id="carta">
+    <div class="foto">
+      <!-- 💞 Puedes cambiar esta imagen por una de ustedes -->
+  <img src="milove.PNG.png" alt="Mi amor"
+     style="
+       width: 220px;          /* más ancha */
+       height: 160px;         /* más bajita → óvalo horizontal */
+       object-fit: cover;     /* encuadra bien la imagen sin deformar */
+       border-radius: 40% / 60%;  /* forma ovalada acostada */
+       box-shadow: 0 0 15px rgba(255, 130, 170, 0.6); /* brillo rosado suave */
+       display: block;
+       margin: 20px auto;     /* centrada */
+     ">
+
+
+
+    </div>
+
+    <h2>Mi cartita para ti 💌</h2>
+
+    <div class="texto-carta">
+      <!-- 💬 Aquí escribe tu carta -->
+      Mi cañita de azucar:  
+      Empezare con que amo todo lo que eres mi cielo, disculpame si mis acciones no lo demuestran, mi corazón te ama y mi alma tambien. Contigo me siento en casa, quisiera atravesar la pantalla que nos separa pero a la vez la que nos mantiene juntos y poder tocar tu alma fisicamente, no quiero una vida sin ti, permiteme quedarme siempre. Disculpa a tu novia enojona medio loca que te pelea tanto. MUACKK TE AMO MI NIÑO CON LOS OJITOS MAS LINDOS DE ESTE MUNDO💕💖  
+    </div>
+  </div>
+
+  <footer>
+    Hecho con amor por tu esposa Danna 💞
+  </footer>
+
+  <script>
+    const boton = document.getElementById('mostrarCarta');
+    const carta = document.getElementById('carta');
+
+    boton.addEventListener('click', () => {
+      carta.style.display = 'block';
+      boton.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
